@@ -2,13 +2,13 @@
 /*add font family, background image*/
 
 body {
-  color: #5bc0de;
+  color: #3602ad;
   font-family: "Poppins", sans-serif;
 }
 
 .fa-map-marker-alt,
 .fa-dot-circle {
-  color: #5bc0de;
+  color: #00d323;
 }
 
 /*Jumbotron*/
