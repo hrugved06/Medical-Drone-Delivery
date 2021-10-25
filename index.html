@@ -1,60 +1,194 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <!--Poppins Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <title>Medical Delivery using Drones</title>
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <script src="https://kit.fontawesome.com/ab2155e76b.js" crossorigin="anonymous"></script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link href="App.css" rel="stylesheet" />
-    <link id='favicon' rel="shortcut icon" href="./Content/drone.png" type="image/x-png">
-</head>
+  </head>
 <body>
-  
 
-    <div class="jumbotron">
-        <div class="container-fluid">
-            <h1>Delivery of medical packages.</h1>
-            <p>Enter the Origin and Destination point.</p>
-            <form class="form-horizontal">
-                <div class="form-group">
-                    <label for="from" class="col-xs-2 control-label"><i class="far fa-dot-circle"></i></label>
-                    <div class="col-xs-4">
-                        <input type="text" id="from" placeholder="Origin" class="form-control">
-                    </div>
-               </div>
-               <div class="form-group">
-                
-                    <label for="to" class="col-xs-2 control-label"><i class="fas fa-map-marker-alt"></i></label>
-                    <div class="col-xs-4">
-                        <input type="text" id="to" placeholder="Destination" class="form-control">
-                    </div>
-                  
-                 </div>
-                 
-            </form>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
 
-            <div class="col-xs-offset-2 col-xs-10">
-                <button class="btn btn-info btn-lg " onclick="calcRoute();"><i class="fas fa-map-signs"> Find</i></button>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div id="googleMap">
-
-            </div>
-            <div id="output">
-
-            </div>
-        </div>
-
+    <div class="overlay">
     </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEox9bJLuMF_XVLfFbP8_93KsTrZUQr8s&libraries=places"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="Scripts/jquery-3.1.1.min.js"></script>
-    <script src="Main.js"></script>
+    <!--Navigation Bar-->
+    <div class="container-fluid d-flex align-items-center justify-content-between" id="navbar">
+        <h2>Medical Delivery using Drones</h2>
+        <div>
+            <a id="get-started-btn" class="get-started-btn" href="/app">Get Started</a>
+        </div>
+    </div>
+
+    <!--Hero Section-->
+    <section id="hero" class="hero d-flex align-items-center ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center">
+                    <h1>Medicinal Delivery using Drones</h1>
+                    <h2>Easily deliver the medicines using Drones </h2>
+                </div>
+                
+                
+                <div class="col-lg-6 hero-img">
+                    <img src="drone-new.png" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Hero Section End-->
+
+    <!--Team Section-->
+    <section id="team" class="team">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <p>Our Team</p>
+        </header>
+
+        <div class="row gy-4 justify-content-around">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="member-img">
+                <img src="/Gaurav-Patil.jpg"  class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Gaurav Patil</h4>
+                <span>AI Student</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="member-img">
+                <img src="Rohit.jpeg" class="img-fluid" alt="">
+                <div class="social">
+                  <!-- <a href="https://www.linkedin.com/in/tina-thomas-8b037a3a/"><i class="bi bi-linkedin"></i></a> -->
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Rohit Chitte</h4>
+                <span>AI Student</span>
+              </div>
+            </div>
+          </div>
+
+        
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="member-img">
+                <img src="Hrugved.png" class="img-fluid" alt="">
+                <div class="social">
+                  <!--<a href="https://www.linkedin.com/in/tina-thomas-8b037a3a/"><i class="bi bi-linkedin"></i></a>-->
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Hrugved Kolhe</h4>
+                <span>AI Student</span>
+              </div>
+            </div>
+          </div>
+
+
+           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="member-img">
+                <img src="AtharvaD.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <!--<a href="https://www.linkedin.com/in/tina-thomas-8b037a3a/"><i class="bi bi-linkedin"></i></a>-->
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Atharva Deolalikar</h4>
+                <span>AI Student</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      
+
+    </section>
+    <!-- End Team Section -->
+
+    <!--Contact Form-->
+    <div id="contact" class="contact mt-5">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <p>Contact Us</p>
+        </header>
+
+        <div class="row gy-4">
+
+            <div class="col-lg-6 hero-img">
+                    <img src="20943953.png" class="img-fluid" alt="">
+            </div>
+
+          <div class="col-lg-6">
+            <form id="php-email-form" class="php-email-form" accept-charset="UTF-8">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                </div>
+                <input type="hidden" name="_redirect"value="http://localhost:5501/contact/"/>
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div id="sent" class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button class="contact-us-btn" type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <!--Contact Form - End-->
+
+    <div class="footer">
+        <div class="container d-flex align-items-center justify-content-center">
+            © Copyright. All Rights Reserved
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{% static 'assets/js/sidebar.js' %} "></script>
+   
 </body>
-</html>
+</html> 
