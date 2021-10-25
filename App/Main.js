@@ -1,6 +1,6 @@
 ﻿//javascript.js
 //set map options
-var myLatLng = { lat: 21.1498134, lng: 79.0820556 };
+var myLatLng = { lat: 19.69522, lng: 73.5626 };
 var mapOptions = {
     center: myLatLng,
     zoom: 7,
