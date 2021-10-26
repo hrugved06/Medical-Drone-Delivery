@@ -91,7 +91,7 @@ section {
   /*Navigation Bar*/
   #navbar{
       padding: 15px 120px;
-      box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+      box-shadow: 2px 2px 4px rgba(0, 16, 43, 0.685);
       position: fixed;
       background-color: #fff;
       z-index: 999;
