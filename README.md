@@ -23,11 +23,11 @@ This is a web interface for medical equipment delivery system in the hilly terra
 
 - The [drone-simulation-path](drone-path-simulation/) contains the model that explains how the delivery drones will takle the real life obstacles using the unsupervised training method used to train the drones.
 
-![Drone](assets/results/drone-simulator.png)
+![Drone](assets/results/drone-simulator.PNG)
 
 - The insight is taken from the unsupervised model of the flappy bird game which learns how to avoid the obstacles over the iterations.
 
-![result](assets/results/results-analysis.png)
+![result](assets/results/results-analysis.PNG)
 
 - Finally, the drone path simulation model can then be integrated with the map API and then we can use the integrated model for the real-life problems. 
 
